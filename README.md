@@ -88,6 +88,40 @@
         - 전역/지역함수
         - 람다함수 
 
-함수 이름 선택 = 더블클릭
-동일한 함수 이름 전체 변경 = F2
-동일한 함수로 자리이동 = F7
+>함수 이름 선택 = 더블클릭
+
+>동일한 함수 이름 전체 변경 = F2
+
+>동일한 함수로 자리이동 = F7
+
+### 복습
+
+지역/전역변수는 이미 아는 부분이라 괜찮았고, 별 증가 시키는 2줄 짜리 코딩을 쓸데없이 혼자 꼬아서 어렵게 생각했다. 2중 for 문인줄 알았더니;
+
+혼자 함수 만들면서 리스트 써본적은 없어서 가져온 예문, 이렇게도 만들 수 있다.
+
+```python
+    def calc(option, *args):
+        result = 0
+
+        if option == 'add':
+            for i in args:
+                result += i
+    
+        elif option == 'mul':
+            result = 1
+            for i in args:
+                result *= i
+
+        elif option == 'sub':
+            result = args[0]
+            for i in args[1:]:
+                result -= i
+
+        elif option == 'div':       
+            result = args[0]
+            for i in args[1:]:
+                result /= i
+```
+
+오늘은 단축기 알아낸거 만으로도 충분히 편해졌다.
