@@ -1,2 +1,5 @@
-for i in range(1,6):
+# 별표찍기
+for i in range(1, 6):   # (1, 6, 1) 동일함
+                        # (5, 0, -1) 역순
     print('*'* i)
+
