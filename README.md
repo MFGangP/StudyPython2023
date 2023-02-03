@@ -282,9 +282,11 @@
     - 상대경로
 
     - 지금 들어와있는 폴더에서 부모 또는 형제 폴더로 가는 경로
-    ..(부모 폴더)
-    .(자기자신)
+    
+            ..(부모 폴더)
 
+            .(자기자신)
+            
 ```python
         file = open('C:\\Source\\studypython2023\\fileiotest\\sample01.txt','w', encoding='UTF-8') # 파일 쓰기로 만듦
 
