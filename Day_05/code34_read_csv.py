@@ -19,3 +19,4 @@ for line in reader:
     print(line)
 
 file.close()    # 반드시 닫아야함
+
