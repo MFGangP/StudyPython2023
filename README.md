@@ -256,9 +256,57 @@
 [if __name__ == '__main__'] = 매직 변수
 
 ### 입출력 다시
-입출력
 
-파일 입출력
-r(읽기), w(새로 만들기), a(수정)
+    입출력
 
-절대경로, 상대경로
+    파일 입출력
+
+    r(읽기), w(새로 만들기), a(첨부)
+
+    파일 열고 close 안하면 큰일남
+
+    UTF-8 사용
+
+```PYTHON
+        file = open('sample.txt','w', encoding='UTF-8')
+```
+
+    절대경로, 상대경로, 경로->패스
+
+    절대경로
+
+    root 드라이브 부터 모든 경로를 다 적는 것
+
+    경로 표시 할 때는 [\]를 두개씩 , 버전이 바뀌어서 그런지 한개도 인식을 해주긴한다, (유닉스,리눅스 등등)[/]이거도 사용 가능 이게 공용이라서 이거 쓰는게 좋음, 써줘야 제대로 찾아감
+
+    상대경로
+
+    지금 들어와있는 폴더에서 부모 또는 형제 폴더로 가는 경로
+    ..(부모 폴더)
+    .(자기자신)
+
+```python
+        file = open('C:\\Source\\studypython2023\\fileiotest\\sample01.txt','w', encoding='UTF-8') # 파일 쓰기로 만듦
+
+        file = open('./fileiotest2/../fileiotest/sample02.txt','a', encoding='UTF-8') # 파일 첨부 and 상대 경로 사용
+
+        file = open('./fileiotest/sample01.txt', 'r', encoding='utf-8') # 파일 읽기
+
+        while True:
+            text = file.readline()
+            # 한 줄 씩 읽기
+            if not text:
+                break
+            else:
+                print(text)
+
+        file.close
+```
+### 예외처리
+
+코딩 도중에 빨간줄
+오류 Error =  코딩 중 발생할 수 있는 문법적 실수
+
+실행 도중에 나가버림
+예외 = Exception은 실행중에 발생할 수 있는 로직적 실수
+
