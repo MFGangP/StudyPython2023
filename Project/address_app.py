@@ -60,6 +60,7 @@ def set_contact():
 
 # 9. 주소록 출력
 def get_contacts(list):
+    
     for item in list:
         print(item)
         print('==========================')
@@ -68,7 +69,9 @@ def get_contacts(list):
 def del_contact(list, name):
     # enumerate 1번 2번 번호를 정해주는 클래스
     # 리스트 인덱스 추가생성
+
     count = 0 # 11. 찾는 이름 카운트
+
     for i, item in enumerate(list):
         if item.isNameExist(name):
             count += 1
@@ -76,13 +79,16 @@ def del_contact(list, name):
 
     if count > 0 : # 11. 메세지 출력
         print('연락처를 삭제했습니다.')
+
     else:
         print('삭제할 연락처가 없습니다.')
 
 # 13. 주소록 파일 저장
 def save_contacts(list):
+
     file = open('C:\Source\studypython2023\Project\contacts.txt',
                 'w',encoding='utf-8')
+
     for item in list:
         text = f'{item.getName()}/{item.getPhone_Num()}/{item.getEmail()}/{item.getAddr()}'
         file.write(f'{text}\n')
@@ -95,6 +101,7 @@ def load_contacts(list):
     try:        
         file = open('C:\Source\studypython2023\Project\contacts.txt',
                     'r',encoding='utf-8')
+
     except Exception as e:  # 15-1. 예외처리
         f = open('C:\Source\studypython2023\Project\contacts.txt',
                     'w',encoding='utf-8')
@@ -116,23 +123,29 @@ def load_contacts(list):
 
 # 추가. 화면 클리어
 def clear_console():
+
     command = 'clear' # Linux, Unix 화면 클리어 명령어
+
     if os.name in ('nt', 'dos'): # Window 운영체제라면
         command = 'cls' # 윈도우 화면 클리어 명령어
         os.system(command)
         
 # 6. 메뉴표시
 def get_menu():
+
     str_menu = ('주소록 앱 v0.3\n'
                 '1.연락처 추가\n'
                 '2.연락처 출력\n'
                 '3.연락처 삭제\n'
                 '4.앱 종료\n')
     print(str_menu)
+
     try:
         menu = int(input('메뉴 입력 : '))
+
     except Exception as e:
         menu = 0
+
     # 사용자가 뭘 잘못 넣든 0으로 바껴서 넘어감
     # 15-3 숫자 외 입력예외 처리
     # 영문자, 특수문자 넣으면 전부 0으로
@@ -152,6 +165,7 @@ def run():
     
     while True:
         sel_menu = get_menu()
+
         if sel_menu == 1:   # 8. 연락처 추가
             try:    # 15-2 연락처 입력 잘못했을 시 예외처리
                 # clear_console() # 화면 클리어는 취향 차이
@@ -159,8 +173,10 @@ def run():
                 contacts.append(contact)
                 input('저장되었습니다.') # 아무것도 안받는 입력
                 clear_console()
+
             except Exception as e:
                 input('올바른 정보를 입력해주세요(이름/전화번호/이메일/주소)')
+
             finally:
                 clear_console()
 
