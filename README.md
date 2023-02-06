@@ -340,7 +340,7 @@
         - 상속, 다중 상속
 
 2. 파이썬 응용
-    - 주소록 프로그램 만들기
+    - 주소록 프로그램 만들기 [소스](https://github.com/MFGangP/StudyPython2023/blob/main/Project/address_app.py)
 
 실행화면
 ![실행화면](https://github.com/MFGangP/StudyPython2023/blob/main/Images/address_app.png?raw=true)
