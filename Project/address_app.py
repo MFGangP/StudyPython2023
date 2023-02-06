@@ -70,10 +70,11 @@ def run():
 
         elif sel_menu == 2:
             clear_console()
+            print(contacts)
 
         elif sel_menu == 3:
             clear_console()
-
+            contacts.remove(contact)
         elif sel_menu == 4:
             break
 
