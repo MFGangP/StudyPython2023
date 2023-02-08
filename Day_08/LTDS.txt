@@ -7,3 +7,6 @@ https://apis.data.go.kr/6260000/BusanTblBusinfoeqStusService/getTblBusinfoeqStus
 &resultType=json
 # 시작은 ? 뒤에 임마들은 파라미터(서비스키, &는 구분자, 페이지 넘버 등등)
 # GETPARAMITER
+
+https://kin.naver.com/search/list.naver
+?query=%EC%A0%9C%EC%9E%84%EC%8A%A4+%EC%9B%B9+%EB%A7%9D%EC%9B%90%EA%B2%BD
