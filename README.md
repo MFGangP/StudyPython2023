@@ -364,9 +364,27 @@ m
         - 기상청 오늘의 날씨 크롤링
         - 데이터 포털 OpenAPI 크롤링
         - BeautifulSoup 크롤링
-    
+
 ![실행화면](https://github.com/MFGangP/StudyPython2023/blob/main/Images/jupiter_folium_openapi_crawling.png?raw=true)<br>
 Folium OpenAPI 연동 화면
+
+```python
+# 전체 정류소 위치값 마커 표시
+for item in station_data:
+        folium.Marker(location=[item['lat'],
+                                item['lng']],
+                                popup=folium.Popup(folium.IFrame('<h4>' + item['stationLoc'] + 
+                                                                 '</h4>' + item['stationNum'] + 
+                                                                 '<br>' + item['addr']),
+                                                   min_width=200, 
+                                                   max_width=250),
+                                icon=folium.Icon(color='blue', 
+                                                 icon='pushpin')
+                     ).add_to(m)
+m
+```
+마커에 크롤링 한 상태 그대로 데이터를 넣고싶었는데, 딕셔너리 구조하고 문자열 포맷팅 f'{}' 호환 안되서 구식방법인 문자열 결합 방식으로 진행했다.  불가능 하지는 않을 것 같은데 어디를 놓친걸까 방법을 찾아봐야겠다
+<br>
 
 ## 9일차
 1. 파이썬 응용
