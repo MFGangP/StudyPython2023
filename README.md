@@ -362,7 +362,17 @@ m
     - 웹크롤링
         - 기상청 오늘의 날씨 크롤링
         - 데이터 포털 OpenAPI 크롤링
-    - 자료구조 추가
+        - BeautifulSoup 크롤링
+
+실행화면    
+![실행화면](https://github.com/MFGangP/StudyPython2023/blob/main/Images/jupiter_folium_openapi_crawling.png?raw=true)
+
+
+## 9일차
+1. 파이썬 응용
     - 윈폼 개발(GUI)
+        - GUI 개발(PyQt)
+
+    - 자료구조 추가
     - 응용 학습
 
