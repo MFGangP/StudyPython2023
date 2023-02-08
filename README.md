@@ -339,9 +339,9 @@
             - 설정 ->Debug: Allow 체크
             - 환경에 따라 디버깅이 안될 때가 있다. 그럴 경우 파이썬 파일로 내보내기 한 다음 디버깅 하면 정상 작동함.
 <br>
-    - json = 딕셔너리로 표현, 파일 크기가 작아서 전송하기 좋다.
-    - json read / write (dump, ensure_ascii, indent)
-    - folium (지도)
+    - json = 딕셔너리로 표현, 파일 크기가 작아서 전송하기 좋다.<br>
+    - json read / write (dump, ensure_ascii, indent)<br>
+    - folium (지도)<br>
     - 라이브러리 사용법
         - ex)! pip install pandas
 <br>
