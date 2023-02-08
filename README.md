@@ -346,6 +346,7 @@ except:
         - ex)! pip install pandas
 <br>
 오늘은 다른 사람들이 만들어놓은 라이브러리 사용이라 딱히 어려운건 없어서 쉬웠다.<br> 대신 사용할 수 있는 범위가 넓어서 알아두면 두고두고 쓰일 것 같다
+
 ```python
 fileName = './skorea-provinces-2018-geo.json'
 m = folium.Map(location=[37.566345, 126.977893],
