@@ -40,3 +40,43 @@ def get_weather(city):
 
 if __name__ == '__main__':
     get_weather('부산')
+
+import requests # 기본적인 URL 모듈로는 안되서 대체
+import json
+import ssl
+from urllib.parse import quote, unquote, urlencode  # 한글을 URLencode 변환하는 함수
+
+def getRequestUrl(url):
+    req = Request(url)
+
+    try:
+        res = urlopen(req)
+        # 응답이 200으로 나오면 정상적으로 통신된다는 이야기
+        if res.getcode() == 200:
+            return res.read().decode('utf-8')
+    except Exception as e:
+        print(e)
+        return None
+
+# stationName 정류소 이름
+
+def getDataPortalSearch(stationName, type):
+    
+    api_url = 'https://apis.data.go.kr/6260000/BusanTblBusinfoeqStusService/getTblBusinfoeqStusInfo'
+    queryString = "?" + urlencode(
+        {   
+            # url을 인코딩해서 특수문자 변환해줌
+            'serviceKey' : '6hhxOoRZmduvmq1x2rC8tUpOTEJPythkOXqaCfRhb1G8rL++dNSwoN9DEGcZKHGhumwHaWyhtgGXbNDBbE/J9g==',
+            # 페이지 넘버
+            '&pageNo' : '1',
+            '&numOfRows' : '10',
+            # 롯데백화점 이름 자동으로 인코딩
+            'stationLoc' : stationName,
+            'resultType' : type
+        }
+    )
+    total_url = api_url + queryString
+    print(total_url)
+
+
+getDataPortalSearch('롯데백화점', 'json')
