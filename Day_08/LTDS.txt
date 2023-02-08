@@ -1,0 +1,9 @@
+https://apis.data.go.kr/6260000/BusanTblBusinfoeqStusService/getTblBusinfoeqStusInfo
+# 여까지는 일반적인 URL
+?serviceKey=6hhxOoRZmduvmq1x2rC8tUpOTEJPythkOXqaCfRhb1G8rL%2B%2BdNSwoN9DEGcZKHGhumwHaWyhtgGXbNDBbE%2FJ9g%3D%3D
+&pageNo=1
+&numOfRows=10
+&stationLoc=%EB%B0%B1%ED%99%94%EC%A0%90
+&resultType=json
+# 시작은 ? 뒤에 임마들은 파라미터(서비스키, &는 구분자, 페이지 넘버 등등)
+# GETPARAMITER
