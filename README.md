@@ -13,12 +13,12 @@
     - 주석
 
 ```python
-        # date : 2023-01-30 - 주석
-        # author : Parkseonghyeon
-        # desc : 콘솔 출력
-        # console 출력 / 여기는 주석입니다! 
-        # 주석 열심히 달기
-        print('Hello, Python!!') # 콘솔출력 함수
+# date : 2023-01-30 - 주석
+# author : Parkseonghyeon
+# desc : 콘솔 출력
+# console 출력 / 여기는 주석입니다! 
+# 주석 열심히 달기
+print('Hello, Python!!') # 콘솔출력 함수
 ```
 
 ## 2일차
@@ -30,28 +30,28 @@
     - 연산자
 
 ```python
-        # 변수
-        val = 1
+# 변수
+val = 1
 
-        # 자료형
-        print(type(val))    # <class 'int'>
+# 자료형
+print(type(val))    # <class 'int'>
 
-        # 문자열 포맷팅 - 문자열을 내 마음대로 바꿔 쓰는것
-        # 문자열에서 {}는 연산자 역할
-        print("I'm so happy {0} you!!, {1}".format(2, 'Hey'))
+# 문자열 포맷팅 - 문자열을 내 마음대로 바꿔 쓰는것
+# 문자열에서 {}는 연산자 역할
+print("I'm so happy {0} you!!, {1}".format(2, 'Hey'))
 
-        # 최신식 문자열 포맷팅
-        # 맨 앞에 f 빠지면 큰일남
-        preword = 3
-        sayHello = 'Hey'
-        print(f"I'm so happy {preword} you!!, {sayHello}")
+# 최신식 문자열 포맷팅
+# 맨 앞에 f 빠지면 큰일남
+preword = 3
+sayHello = 'Hey'
+print(f"I'm so happy {preword} you!!, {sayHello}")
 
-        # 주의 사항 - 소수점 표시하는 법
-        pi = 3.141592
-        print(f'파이는 {pi}입니다.')        # 파이는 3.141592 입니다.
-        # 소수점 2째 자리까지 자르기
-        print(f'파이는 {pi:0.2f}입니다.')   # 파이는 3.14 입니다.
-        print(f'파이는 {pi:10.3f}입니다.')  # 파이는          3.142 입니다.
+# 주의 사항 - 소수점 표시하는 법
+pi = 3.141592
+print(f'파이는 {pi}입니다.')        # 파이는 3.141592 입니다.
+# 소수점 2째 자리까지 자르기
+print(f'파이는 {pi:0.2f}입니다.')   # 파이는 3.14 입니다.
+print(f'파이는 {pi:10.3f}입니다.')  # 파이는          3.142 입니다.
 ```
 
 ### 자습
@@ -59,10 +59,10 @@
     내일 1교시를 들을 수 없는 상황이라 혼자 자료보고 if문 for 문 자습함
 
 ```Python
-        arr2 = ('me', 'my', 'friend', 'jane')
+arr2 = ('me', 'my', 'friend', 'jane')
 
-        for item in arr2:           # arr2 리스트 개수만큼 반복
-        print(f'{item:>10}')     # :>10 몰?루
+for item in arr2:           # arr2 리스트 개수만큼 반복
+print(f'{item:>10}')     # :>10 몰?루
 ```
     예문에 문자열 포맷팅 최신 버전을 처음봐서 처음보는 방식이라 무슨 소리인지 모르겠네....
 
@@ -103,27 +103,27 @@
     혼자 함수 만들면서 리스트 써본적은 없어서 가져온 예문, 이렇게도 만들 수 있다.
 
 ```python
-    def calc(option, *args):
-        result = 0
+def calc(option, *args):
+    result = 0
 
-        if option == 'add':
-            for i in args:
-                result += i
+    if option == 'add':
+        for i in args:
+            result += i
     
-        elif option == 'mul':
-            result = 1
-            for i in args:
-                result *= i
+    elif option == 'mul':
+        result = 1
+        for i in args:
+            result *= i
 
-        elif option == 'sub':
-            result = args[0]
-            for i in args[1:]:
-                result -= i
+    elif option == 'sub':
+        result = args[0]
+        for i in args[1:]:
+            result -= i
 
-        elif option == 'div':       
-            result = args[0]
-            for i in args[1:]:
-                result /= i
+    elif option == 'div':       
+        result = args[0]
+        for i in args[1:]:
+            result /= i
 ```
     오늘은 단축키 알아낸거 만으로도 충분히 편해졌다.
 
@@ -176,60 +176,60 @@
             - 모듈을 여러개 묶어서 큰 단위로 만든 것
 
 ```python
-        import math as m
-        # 모듈 이름 원하는 대로 바꾸기
-        # 클래스로 안되어 있는 모듈도 있음
+import math as m
+# 모듈 이름 원하는 대로 바꾸기
+# 클래스로 안되어 있는 모듈도 있음
 ```
     개념은 이해했는데 디버깅하면서 다시 생각해봐야 하는 코드
     뭔가 눈에 확 안들어와서 햇갈림
 
 ```python
-        class Car:
+class Car:
 
-            __number = '54라 9538'
-            # __ 이 변수에 직접적으로 접근하지말라.
+    __number = '54라 9538'
+    # __ 이 변수에 직접적으로 접근하지말라.
 
-            def get_number(self) -> str:
-                return self.__number
+    def get_number(self) -> str:
+        return self.__number
 
-            # 클래스 외부에선 변경 X, 멤버 함수로는 내부를 조작 O
-            def set_number(self, number):
-                self.__number = number
+    # 클래스 외부에선 변경 X, 멤버 함수로는 내부를 조작 O
+    def set_number(self, number):
+        self.__number = number
 
-            def __init__(self, number = '54라 9538') -> None:
-                print('__init__')
-                self.__number = number
+    def __init__(self, number = '54라 9538') -> None:
+        print('__init__')
+        self.__number = number
         
-            # def __new__(cls):
-            #     print('__new__')
-            #     return super().__new__(cls) # 부모 클래스 (상속)
+    # def __new__(cls):
+    #     print('__new__')
+    #     return super().__new__(cls) # 부모 클래스 (상속)
 
-            # 부모 클래스 생성자를 생성해서 new를 실행해라
-            # new는 새로운 클래스를 만듦 - 얘가 진짜 생성자(잘 안씀)
-            # init은 초기화 할 때 새로운 변수 값 할당 - 근데 얘가 생성자라 부름
+    # 부모 클래스 생성자를 생성해서 new를 실행해라
+    # new는 새로운 클래스를 만듦 - 얘가 진짜 생성자(잘 안씀)
+    # init은 초기화 할 때 새로운 변수 값 할당 - 근데 얘가 생성자라 부름
 
-            def __str__(self) -> str:
-                return f'제 차 번호는 {self.__number}입니다. ' 
+    def __str__(self) -> str:
+        return f'제 차 번호는 {self.__number}입니다. ' 
 
-        yourcar = Car('88호 7645')
-        print(yourcar)
-        yourcar.__number = '54라 9999'  # 외부에서는 멤버변수에 접근 불가
-        print(yourcar)
-        print('클래스 내부 함수 사용!')
-        yourcar.set_number('55오 5555')
-        print(yourcar)
+yourcar = Car('88호 7645')
+print(yourcar)
+yourcar.__number = '54라 9999'  # 외부에서는 멤버변수에 접근 불가
+print(yourcar)
+print('클래스 내부 함수 사용!')
+yourcar.set_number('55오 5555')
+print(yourcar)
 
-        mycar = Car()
-        print(mycar)
-        print(f'제 차는 아이오닉이고, 번호는 {mycar.get_number()}입니다.')
+mycar = Car()
+print(mycar)
+print(f'제 차는 아이오닉이고, 번호는 {mycar.get_number()}입니다.')
 
-        mycar.__number = '132거 8874'
-        print(mycar.get_number())
-        print(mycar)
+mycar.__number = '132거 8874'
+print(mycar.get_number())
+print(mycar)
 
-        # 외부(객체)에서 클래스 내부의 속성값을 못바꾸게 하는 것
-        # 캡슐화
-        # 개발자의 권한을 못 건드리게 만드는것
+# 외부(객체)에서 클래스 내부의 속성값을 못바꾸게 하는 것
+# 캡슐화
+# 개발자의 권한을 못 건드리게 만드는것
 ```
     하나씩 풀어서 보면 무슨 말인지 알겠는데 큰 덩어리로 보니까 이해가 안됐다. 다시 보니까 이해 됌
 
@@ -257,7 +257,7 @@
     - UTF-8 사용
 
 ```PYTHON
-        file = open('sample.txt','w', encoding='UTF-8')
+file = open('sample.txt','w', encoding='UTF-8')
 ```
 
     - 절대경로, 상대경로, 경로->패스
@@ -272,21 +272,21 @@
             .(자기자신)
             
 ```python
-        file = open('C:\\Source\\studypython2023\\fileiotest\\sample01.txt','w', encoding='UTF-8') # 파일 쓰기로 만듦
+file = open('C:\\Source\\studypython2023\\fileiotest\\sample01.txt','w', encoding='UTF-8') # 파일 쓰기로 만듦
 
-        file = open('./fileiotest2/../fileiotest/sample02.txt','a', encoding='UTF-8') # 파일 첨부 and 상대 경로 사용
+file = open('./fileiotest2/../fileiotest/sample02.txt','a', encoding='UTF-8') # 파일 첨부 and 상대 경로 사용
 
-        file = open('./fileiotest/sample01.txt', 'r', encoding='utf-8') # 파일 읽기
+file = open('./fileiotest/sample01.txt', 'r', encoding='utf-8') # 파일 읽기
 
-        while True:
-            text = file.readline()
+while True:
+    text = file.readline()
             # 한 줄 씩 읽기
-            if not text:
-                break
-            else:
-                print(text)
+    if not text:
+        break
+    else:
+        print(text)
 
-        file.close
+    file.close
 ```
 ### 예외처리
 - 코딩 도중에 빨간줄
@@ -299,10 +299,10 @@
 
 ```python
 # 오류가 날 것 같은 줄에 try
-        try:
-            print(div(x, y))
-        except:
-            print('나누기 실패 : 0으로 나누려고 했습니다.')
+try:
+    print(div(x, y))
+except:
+    print('나누기 실패 : 0으로 나누려고 했습니다.')
 ```
 - 단 [except Exception as e:]이 상단에 올라오면 안됌 제일 아래에 존재해야한다.
 - 예외 여러 개 할 필요 없다 다 잡아준다.(사용자가 요청하면 바꿔라) 
@@ -349,7 +349,17 @@
     - 리스트 연산 추가
     - 응용 학습
 
-오늘은 다른 사람들이 만들어놓은 라이브러리 사용이라 딱히 어려운건 없어서 쉬웠음. 대신 사용할 수 있는 범위가 넓어서 알아두면 두고두고 쓰일 것 같음
+오늘은 다른 사람들이 만들어놓은 라이브러리 사용이라 딱히 어려운건 없어서 쉬웠음.<br> 대신 사용할 수 있는 범위가 넓어서 알아두면 두고두고 쓰일 것 같음
+```python
+fileName = './skorea-provinces-2018-geo.json'
+m = folium.Map(location=[37.566345, 126.977893],
+               zoom_start=7,
+               zoom_control=True)
+gfile = open(fileName, 'r', encoding='utf-8').read()
+jsonData = json.loads(gfile) # json 파일 텍스트를 전부 읽어옴
+folium.GeoJson(jsonData, name='대한민국 지역경계').add_to(m)
+m
+```
 
 ## 8일차
     - 윈폼 개발(GUI)
