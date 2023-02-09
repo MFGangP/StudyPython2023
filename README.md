@@ -394,7 +394,9 @@ stop_str = f'<h4>{item["stationLoc"]}</h4>{item["stationNum"]}<br>{item["addr"]}
 1. 파이썬 응용
 
     - 윈폼 개발(GUI)
-        - GUI 개발(PyQt)
+        - Tkinter 소개
+        - PtQt 소개, 설치
+        - GUI 개발(PyQt) - 주피터 노트북은 안씀
     - 자료구조 추가
     - 응용 학습
 
