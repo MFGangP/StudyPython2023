@@ -22,7 +22,8 @@ class MyApp(QWidget):
         cbKorea = QCheckBox('한국', self)
         cbKorea.move(20, 60)
         cbKorea.stateChanged.connect(self.checkKorea)
-
+        
+        # 라디오 버튼
         rbtn = QRadioButton('남성', self)
         rbtn.move(120,20)
         rbtn.setChecked(True)
