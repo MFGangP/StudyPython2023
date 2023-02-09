@@ -396,7 +396,17 @@ stop_str = f'<h4>{item["stationLoc"]}</h4>{item["stationNum"]}<br>{item["addr"]}
     - 윈폼 개발(GUI)
         - Tkinter 소개
         - PtQt 소개, 설치
-        - GUI 개발(PyQt) - 주피터 노트북은 안씀
+        - GUI 개발(PyQt) 
+            - PyQt 기초
+            - 위젯 연습
+        
+주피터 노트북은 안씀
+
+
+
+
+## 10일차
+
     - 자료구조 추가
     - 응용 학습
 
