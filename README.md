@@ -408,6 +408,7 @@ stop_str = f'<h4>{item["stationLoc"]}</h4>{item["stationNum"]}<br>{item["addr"]}
 
 ## 10일차
 
-    - 자료구조 추가
-    - 응용 학습
-    - 오후[코딩테스트]
+- 자료구조 추가
+- 응용 학습
+- 오후[코딩테스트]
+
