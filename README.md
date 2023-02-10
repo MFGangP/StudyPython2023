@@ -430,3 +430,12 @@ def initUI(self):
 
     self.lblOption.move(20, 20)
 ```
+
+super()가 뭐하는 애냐?
+
+```python
+    def __init__(self):
+        super().__init__()
+        # 자식 클래스(Student)가 상속받는 부모 클래스(Human)를 
+        # 자식 클래스(Student)에 불러오겠다 는 의미
+```
