@@ -410,6 +410,11 @@ stop_str = f'<h4>{item["stationLoc"]}</h4>{item["stationNum"]}<br>{item["addr"]}
 1. 파이썬 응용
     - GUI 개발
         - PyQt 위젯 계속
+        - PyQt 다이얼로그
+
+![실행화면](https://github.com/MFGangP/StudyPython2023/blob/main/Images/dialog.png?raw=true)
+
+PyQt 실행화면
 
 self를 왜 쓰냐?
 
