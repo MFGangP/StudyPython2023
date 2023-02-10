@@ -14,7 +14,7 @@ class MyApp(QWidget):
         self.initUI()
 
     def initUI(self):
-        pixmap = QPixmap('./Day_10/image.jpg').scaledToWidth(640)
+        pixmap = QPixmap('./Day_10/image.jpg').scaledToWidth(640) # .scaledToHeight() 둘 중 하나
         # 파일 불러와서 사이즈 조절
         lblImage = QLabel(self)
         lblImage.setPixmap(pixmap)
@@ -25,8 +25,9 @@ class MyApp(QWidget):
         vbox = QVBoxLayout(self)
         # 이미지 밑에 글자 넣으려고 vbox에 넣음
         vbox.addWidget(lblImage)
+        # 이미지 
         vbox.addWidget(lblSize)
-
+        # 이미지 크기 나타내는 텍스트
         self.setLayout(vbox)
         
         # 필수 배치
