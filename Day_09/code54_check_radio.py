@@ -36,7 +36,7 @@ class MyApp(QWidget):
         self.setGeometry(300,300,300,300)
         self.show()
 
-    # 슬롯함수
+    # 슬롯함수 - 시그널을 처리하는 함수
     def changeTitle(self, state):
         if state == Qt.CheckState.Checked:  # Qt.Checked도 사용 가능
             self.setWindowTitle('체크박스 체크')

@@ -397,7 +397,7 @@ stop_str = f'<h4>{item["stationLoc"]}</h4>{item["stationNum"]}<br>{item["addr"]}
         - Tkinter 소개
         - PtQt 소개, 설치
         - GUI 개발(PyQt) 
-            - PyQt 기초
+            - PyQt 기초 사용법
             - 위젯 연습
 
 인터페이스 만드는게 제일 어려울거라 생각하고 있었는데 너무 모듈화가 잘 되어있어서 그런가 내 생각이 처참하게 깨졌다.
@@ -407,8 +407,21 @@ stop_str = f'<h4>{item["stationLoc"]}</h4>{item["stationNum"]}<br>{item["addr"]}
 인턴하면서 했던 HMI처럼 인터페이스를 만들어주는 라이브러리가 있어서 그때 생각이 모락모락 나는 수업이였다.
 
 ## 10일차
+1. 파이썬 응용
+    - GUI 개발
+        - PyQt 위젯 계속
 
-- 자료구조 추가
-- 응용 학습
-- 오후[코딩테스트]
+self를 왜 쓰냐?
 
+- self를 빼면 initUI의 변수(로컬 변수)
+- 이 함수(initUI) 안에서만 도는 변수
+- self = MyApp
+- self를 넣어야 글로벌 변수(전역변수)
+- 내 클래스(MyApp)에 속하는 변수로 만들게
+
+```python
+def initUI(self):
+    self.lblOption = QLabel('선택값 : ', self)
+
+    self.lblOption.move(20, 20)
+```

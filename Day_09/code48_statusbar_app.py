@@ -65,6 +65,7 @@ class MyApp(QMainWindow):
         
         self.show() # 핵심!!  보여준다.
         # 메서드는 위젯을 스크린에 보여줍니다.
+        
     # 화면 중심 셋팅
     def setCenter(self):
         qr = self.frameGeometry()   # 창 자기 자신의 위치값 
