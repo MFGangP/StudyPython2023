@@ -439,3 +439,5 @@ def __init__(self):
     # 자식 클래스(Student)가 상속받는 부모 클래스(Human)를 
     # 자식 클래스(Student)에 불러오겠다 는 의미
 ```
+
+
